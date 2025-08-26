@@ -5,7 +5,7 @@ import './global.css'
 
 export function App() {
   return (
-    <BrowserRouter basename="/infnet-pb-blog">
+    <BrowserRouter basename="/front-end_monolito-blog">
       <Router />
     </BrowserRouter>
   )
