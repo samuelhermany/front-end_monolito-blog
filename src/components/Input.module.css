@@ -1,0 +1,22 @@
+.divInput {
+  margin-top: 1rem;
+}
+
+.divInput > input {
+  margin-top: 0.5rem;
+  border: none;
+  font-size: 1.5rem;
+  background-color: var(--gray-600);
+  color: var(--green-300);
+  border-radius: 10px;
+  height: 3.5rem;
+  width: 100%;
+  padding: 0.5rem;
+}
+
+.divInput > p {
+  color: var(--white);
+  background-color: transparent;
+  font-size: 1rem;
+  margin: 0.1rem 0;
+}

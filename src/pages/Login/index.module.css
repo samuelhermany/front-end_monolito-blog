@@ -1,0 +1,236 @@
+.container {
+  color: var(--white);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 2rem;
+  height: 100%;
+}
+.logo {
+  position: absolute;
+  top: 3rem;
+  left: 6rem;
+  width: 18rem;
+  height: 2rem;
+}
+.background {
+  width: 49%;
+  height: 100%;
+  border-radius: 30px 0 0 30px;
+  background-image: url('../../assets/img/background_pc.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.login {
+  background-color: var(--white);
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: clamp(1rem, 5vw, 6rem);
+  padding: 2rem;
+  max-width: 37.75rem;
+  min-width: 22rem;
+  width: 100%;
+  box-shadow: 0 10px 60px 0 rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+}
+.login > h1 {
+  color: var(--gray-900);
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 32px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+.formLogin > button {
+  background-color: var(--blue-500);
+  color: var(--white);
+  height: 56px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  margin-top: 24px;
+  width: 100%;
+  cursor: pointer;
+}
+.label {
+  color: var(--gray-500);
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+}
+.input {
+  margin: 1rem 0;
+  position: relative;
+}
+.input > p {
+  font-family: 'Inter', sans-serif;
+  font-style: 500;
+  font-size: 1rem;
+  line-height: auto;
+  margin-bottom: 4px;
+}
+.input > input {
+  padding: 1rem;
+  font-size: 1rem;
+  background-color: var(--white);
+  border: 1px solid var(--gray-100);
+  border-radius: 8px;
+  height: 3.5rem;
+  width: 100%;
+}
+.buttonClear {
+  position: absolute;
+  right: 1rem;
+  bottom: 0.625rem;
+  background: transparent;
+  border: none;
+  color: var(--gray-400);
+  font-size: 24px;
+}
+.buttonVisibilityPassword {
+  position: absolute;
+  right: 1rem;
+  bottom: 0.625rem;
+  color: var(--gray-400);
+  background: transparent;
+  border: none;
+  font-size: 24px;
+}
+.buttonVisibilityPassword > svg,
+.buttonClear > svg {
+  background-color: transparent;
+}
+.remember {
+  display: flex;
+  justify-content: space-between;
+}
+.remember > div {
+  display: flex;
+  gap: 8px;
+}
+.remember > div > p {
+  color: var(--gray-900);
+}
+
+.remember > button {
+  color: var(--gray-900);
+  background-color: transparent;
+  border: none;
+  text-decoration: underline var(--blue-500);
+}
+.register {
+  display: flex;
+  gap: 8px;
+}
+.register > p {
+  display: flex;
+  font-size: 18px;
+  margin-top: 24px;
+  gap: 8px;
+  color: var(--gray-500);
+}
+.register p:last-of-type {
+  /* seu estilo aqui */
+  color: var(--gray-900);
+  text-decoration: underline var(--blue-500);
+  color: red;
+}
+/* Tablet-Retrato: vertical */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .container {
+    /* background-color: lightcoral; */
+    gap: 0;
+    flex-direction: column-reverse;
+  }
+  .login {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .background {
+    width: 100%;
+    height: 40%;
+    border-radius: 0 0 30px 30px;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgb(255, 255, 255)),
+      url('../../assets/img/background_pc.png');
+  }
+}
+
+/* Tablet-Paisangem: horizontal */
+@media (min-width: 768px) and (max-width: 1367px) and (orientation: landscape) {
+  .container {
+    /* background-color: var(--blue-500); */
+    gap: 0;
+  }
+  .login {
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+}
+
+/* Celular-Retrato: vertical */
+@media (max-width: 480px) and (orientation: portrait) {
+  .container {
+    background-color: lightgreen;
+    gap: 2rem;
+    flex-direction: column-reverse;
+  }
+  .login {
+    width: 100%;
+    height: 100%;
+    padding: 2rem 1.2rem;
+    margin: 0;
+    border-radius: 0;
+  }
+  .login > h1 {
+    font-size: 1.5rem;
+  }
+  .background {
+    width: 100%;
+    height: 30%;
+    border-radius: 0;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgb(255, 255, 255)),
+      url('../../assets/img/background_mobile.png');
+  }
+  .logo {
+    left: calc(100% - 10rem);
+    width: 9rem;
+    top: 24%;
+    height: 1rem;
+    object-fit: fill;
+  }
+}
+
+/* Celular-Paisagem: horizontal */
+@media (max-width: 932px) and (orientation: landscape) {
+  .container {
+    /* background-color: orange; */
+    gap: 0;
+  }
+  .login {
+    width: 100%;
+    height: calc(100% + 4rem);
+    margin: 0;
+    padding: 1rem 1rem;
+    border-radius: 0;
+  }
+  .login > h1 {
+    font-size: 1.5rem;
+  }
+  .background {
+    height: calc(100% + 4rem);
+    border-radius: 0;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgb(255, 255, 255)),
+      url('../../assets/img/background_mobile.png');
+  }
+  .logo {
+    left: calc(100% - 11rem);
+    width: 10rem;
+    top: 1rem;
+    height: 1.5rem;
+    object-fit: contain;
+  }
+}
